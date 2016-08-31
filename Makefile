@@ -5,9 +5,9 @@ cc65:
 
 clean:
 	make -C cc65 clean
-	rm -rf src/*.s
+	make -C src clean
 
-src:
+src: cc65
 	make -C src
 
-all: cc65 src
+all: src

@@ -5,7 +5,7 @@ CL=../cc65/bin/cl65
 # Compiler flags
 CFLAGS=--standard cc65 -t nes
 # Linker flags
-LDFLAGS=
+LDFLAGS=-t nes
 
 SOURCES=main.c
 OBJECTS=$(SOURCES:.c=.o)
