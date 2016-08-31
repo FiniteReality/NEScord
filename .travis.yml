@@ -1,0 +1,5 @@
+language: c
+
+script:
+  - export CPU_COUNT=`nproc`
+  - make -j$CPU_COUNT all
