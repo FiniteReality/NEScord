@@ -1,4 +1,4 @@
-.PHONY: all
+.PHONY: all clean
 
 # Use CC65 to compile our code
 CL=../cc65/bin/cl65
@@ -13,6 +13,9 @@ EXECUTABLE=nescord
 
 all: $(SOURCES) $(EXECUTABLE)
 
+clean:
+	rm -f *.o
+	rm -f $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CL) $(LDFLAGS) $(OBJECTS) -o $@
