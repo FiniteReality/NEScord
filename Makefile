@@ -1,4 +1,4 @@
-.PHONY: all clean cc65
+.PHONY: all clean cc65 src
 
 cc65:
 	make -s -C cc65 all >/dev/null
