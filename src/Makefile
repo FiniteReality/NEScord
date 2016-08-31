@@ -3,7 +3,7 @@
 # Use CC65 to compile our code
 CL=../cc65/bin/cl65
 # Compiler flags
-CFLAGS=-t nes
+CFLAGS=--standard cc65 -t nes
 # Linker flags
 LDFLAGS=
 
