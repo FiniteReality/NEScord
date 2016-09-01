@@ -13,7 +13,7 @@ struct user_info
 	short int _discrim;
 };
 
-const char* get_user_name(struct user_info* user);
+const char* get_user_name(struct user_info* user, int* length);
 const char* get_user_id(struct user_info* user);
 const short int get_user_discrim(struct user_info* user);
 
