@@ -1,6 +1,6 @@
 # Serial communication #
 
-See [1] for information on the expansion port on the NES
+See [NES pinout] for information on the expansion port on the NES.
 
 ## Used pins ##
 
@@ -106,5 +106,4 @@ server. Clients must not assume that it is constant, and must assume that it
 may not be pulsed for long periods of time. This is to improve efficiency so
 that the server does not have to spend CPU cycles maintaining the clock when
 it needs to spend its time doing something else.
-
-[1]: http://wiki.nesdev.com/w/index.php/NES_expansion_port_pinout
+[NES pinout]: http://wiki.nesdev.com/w/index.php/NES_expansion_port_pinout
