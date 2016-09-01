@@ -4,6 +4,8 @@
 
 #include <nes.h>
 
+#include "discord/discord.h"
+
 static const char message[] = "Hello, world!";
 
 int main(void)

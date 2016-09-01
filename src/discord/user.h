@@ -2,27 +2,20 @@
 // Author: FiniteReality
 // Description: User-specific discord definitions
 
-// Define a normal user.
-// This struct contains information about said user.
-typedef struct user
+#ifndef _user_h_
+#define _user_h_
+
+// Information about a user
+struct user_info
 {
-// THESE FIELDS ARE PRIVATE. I DO NOT RECOMMEND USING THEM EVEN IF THEY SHOW
-// UP IN YOUR INTELLISENSE.
-	char* user_id;
-	char* user_name;
-} user_t;
+	char* _id;
+	char* _name;
+	short int _discrim;
+};
 
-char* get_user_name(user_t* user);
-char* get_user_id(user_t* user);
+const char* get_user_name(struct user_info* user);
+const char* get_user_id(struct user_info* user);
+const short int get_user_discrim(struct user_info* user);
 
-// Define a guild user.
-// This struct contains information about said guild user.
-typedef struct guild_user
-{
-	user* user;
-	char* nickname;
-} guild_user_t;
 
-char* get_guild_user_name(guild_user_t* user);
-char* get_guild_user_id(guild_user_t* user);
-char* get_guild_user_nick(guild_user_t* user);
+#endif // _user_h_
