@@ -4,20 +4,21 @@ See [NES pinout] for information on the expansion port on the NES.
 
 ## Used pins ##
 
-06,07,08,09,10,38,39,40,41,42
+06,07,08,09,10,38,39,40,41,42,24
 
 ## Pin descriptions ##
 
 - **EXP9**: SOCK READ
 - **EXP8**: SOCK WRITE
-- **EXP7**: CLOCK
-- **EXP6**: DATA 0
-- **EXP5**: DATA 1
-- **EXP4**: DATA 2
-- **EXP3**: DATA 3
-- **EXP2**: DATA 4
+- **EXP7**: DATA 0
+- **EXP6**: DATA 1
+- **EXP5**: DATA 2
+- **EXP4**: DATA 3
+- **EXP3**: DATA 4
+- **EXP2**: DATA 5
 - **EXP1**: ACK
 - **EXP0**: HELLO
+- **CIC CLK**: CLOCK
 
 ## Explanation ##
 
@@ -79,7 +80,7 @@ that there is no client connected.
 S->C SOCK READ high # request to read
 C->S ACK pulse # acknowledge the request
 
-C->S DATA 1-4 pulse
+C->S DATA n pulse
 ...
 
 S->C SOCK READ low # buffer full, stop sending data
@@ -92,7 +93,7 @@ C->S ACK pulse # acknowledge the message
 S->C SOCK WRITE high # request to write
 C->S ACK pulse # acknowledge the request
 
-S->C DATA 1-4 pulse
+S->C DATA n pulse
 ...
 
 S->C SOCK WRITE low # buffer emptied, stop reading data
@@ -101,9 +102,6 @@ C->S ACK pulse # acknowledge the request
 
 ### CLOCK ###
 
-The `CLOCK` bit is pulsed by the server at a variable rate decided by the
-server. Clients must not assume that it is constant, and must assume that it
-may not be pulsed for long periods of time. This is to improve efficiency so
-that the server does not have to spend CPU cycles maintaining the clock when
-it needs to spend its time doing something else.
+The `CLOCK` bit is pulsed by the NES console at 4MHz.
+
 [NES pinout]: http://wiki.nesdev.com/w/index.php/NES_expansion_port_pinout
