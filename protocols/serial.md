@@ -1,3 +1,8 @@
+** \*\*UPDATE\*\* **: Using an on-board Ethernet jack and accompanying
+microcontroller is much easier than this protocol ended up being. As such, the
+following is an archive of what was originally being used, and is deprecated.
+If you're looking for updated schematics, they are not available yet.
+
 # Serial communication #
 
 See [NES pinout] for information on the expansion port on the NES.
