@@ -7,5 +7,6 @@
 
 #include "user.h"
 #include "guild.h"
+#include "channel.h
 
 #endif _discord_h_

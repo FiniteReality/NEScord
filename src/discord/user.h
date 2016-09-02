@@ -8,8 +8,8 @@
 // Information about a user
 struct user_info
 {
-	char* _id;
-	char* _name;
+	unsigned char* _id;
+	unsigned char* _name;
 	short int _discrim;
 };
 
