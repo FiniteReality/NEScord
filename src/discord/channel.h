@@ -25,14 +25,14 @@ struct channel_info
 struct dm_channel
 {
 	struct channel_info* info;
-	user_info* recipient;
+	struct user_info* recipient;
 };
 
 // Information about a guild text channel
 struct text_channel
 {
 	struct channel_info* info;
-	guild_info* guild;
+	struct guild_info* guild;
 };
 
 // Information about a guild voice channel
