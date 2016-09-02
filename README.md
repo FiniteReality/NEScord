@@ -1,4 +1,4 @@
-# NEScord #
+# NEScord [![Build Status](https://travis-ci.org/FiniteReality/NEScord.svg?branch=master)](https://travis-ci.org/FiniteReality/NEScord) #
 
 A Discord library for the NES.
 
