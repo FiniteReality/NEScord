@@ -24,29 +24,29 @@ struct channel_info
 // Information about a DM channel
 struct dm_channel
 {
-	channel_info* info;
+	struct channel_info* info;
 	user_info* recipient;
 };
 
 // Information about a guild text channel
 struct text_channel
 {
-	channel_info* info;
+	struct channel_info* info;
 	guild_info* guild;
 };
 
 // Information about a guild voice channel
 struct voice_channel
 {
-	channel_info* info;
-	guild_info* guild;
+	struct channel_info* info;
+	struct guild_info* guild;
 	unsigned char* bitrate;
 };
 
 // Information about a group channel
 struct group_channel
 {
-	channel_info* info;
+	struct channel_info* info;
 	// user_info* owner; // TODO: do groups have owners?
 };
 
